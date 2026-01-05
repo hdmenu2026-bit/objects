@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Menu</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- START SCREEN -->
+  <div id="start">
+    <button>Tap to Start 3D Menu</button>
+  </div>
+
+  <!-- CAMERA -->
+  <video id="camera" autoplay playsinline muted></video>
+
+  <!-- DARK OVERLAY -->
+  <div class="overlay"></div>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading food…</p>
+  </div>
+
+  <!-- MODEL VIEWER -->
+  <model-viewer
+    id="viewer"
+    src=""
+    ar
+    ar-modes="scene-viewer quick-look"
+    camera-controls
+    auto-rotate
+    auto-rotate-delay="0"
+    rotation-per-second="20deg"
+    interaction-prompt="none"
+    exposure="1"
+    shadow-intensity="0.8"
+    camera-orbit="0deg 70deg 0.9m"
+    min-camera-orbit="auto auto 0.7m"
+    max-camera-orbit="auto auto 1.4m"
+  ></model-viewer>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <button id="prev">◀</button>
+    <span class="title">3D Menu</span>
+    <button id="next">▶</button>
+  </div>
+
+  <!-- AR BUTTON -->
+  <button class="ar-btn" id="arBtn">View in AR</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
