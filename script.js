@@ -4,10 +4,8 @@ const viewer = document.getElementById("viewer");
 const loader = document.getElementById("loader");
 
 const models = [
-  "/models/Chicken_Strips.glb",
-  "/models/Cookie.glb",
-  "/models/CupCake.glb",
-  "/models/sushi.glb"
+  "/models/1_compressed.glb",
+  "/models/2_compressed.glb"
 ];
 
 let index = 0;
@@ -85,4 +83,5 @@ startScreen.onclick = async () => {
 /* ---------- AR ---------- */
 document.getElementById("arBtn").onclick = () => {
   viewer.activateAR();
+
 };
